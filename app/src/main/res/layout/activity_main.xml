@@ -7,10 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
     
-    <TextView
+    <Button
         android:id="@+id/tv_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        android:textColor="@android:color/white"
         android:text="Start Create Floating Menu!!!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
