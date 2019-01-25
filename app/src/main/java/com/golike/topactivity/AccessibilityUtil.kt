@@ -19,7 +19,8 @@ class AccessibilityUtil {
 
         private const val TAG = "AccessibilityUtil"
 
-       @JvmStatic fun isAccessibilitySettingsOn(context: Context): Boolean {
+        @JvmStatic
+        fun isAccessibilitySettingsOn(context: Context): Boolean {
             var accessibilityEnabled = 0
             try {
                 accessibilityEnabled = Settings.Secure.getInt(context.contentResolver,
@@ -28,13 +29,10 @@ class AccessibilityUtil {
                 e.printStackTrace()
                 Log.i(TAG, e.toString())
             }
-
             if (accessibilityEnabled == 1) {
                 val services = Settings.Secure.getString(context.contentResolver,
                         Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES)
-                if (services != null) {
-                    return services.toLowerCase().contains(context.packageName.toLowerCase())
-                }
+                return services!!.toLowerCase().contains(context.packageName.toLowerCase())
             }
             return false
         }

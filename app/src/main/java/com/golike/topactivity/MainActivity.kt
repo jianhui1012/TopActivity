@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.provider.Settings
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import me.ele.uetool.UETool
 
 
 class MainActivity : AppCompatActivity() {
@@ -12,6 +13,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        UETool.showUETMenu()
 
         this.tv_start.setOnClickListener {
             run {
