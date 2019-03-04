@@ -1,16 +1,17 @@
 package com.golike.topactivity
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import com.airbnb.lottie.LottieProperty
 import com.airbnb.lottie.model.KeyPath
 import com.airbnb.lottie.value.LottieValueCallback
 import kotlinx.android.synthetic.main.activity_main.*
 import me.ele.uetool.UETool
+import me.imid.swipebacklayout.lib.app.SwipeBackActivity
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity :  SwipeBackActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 animation_view.setAnimation("lottie_data_edit.json")
                 animation_view.playAnimation()
-
+                startActivity(Intent(this@MainActivity,TestActivity::class.java))
             }
         }
 

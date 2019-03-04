@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<com.google.android.flexbox.FlexboxLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:flexDirection="row"
+    app:flexWrap="wrap"
+    app:justifyContent="center"
+    app:alignItems="center"
     tools:context=".MainActivity">
     
     <Button
@@ -14,20 +18,13 @@
         android:background="@color/colorPrimary"
         android:padding="10dp"
         android:textColor="@android:color/white"
-        android:text="Start Create Floating Menu!!!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:text="Start Create Floating Menu!!!" />
     
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_view"
         android:layout_width="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         android:layout_height="wrap_content"
         app:lottie_loop="false"
         app:lottie_autoPlay="false" />
 
-</android.support.constraint.ConstraintLayout>
+</com.google.android.flexbox.FlexboxLayout>
